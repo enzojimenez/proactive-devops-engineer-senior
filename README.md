@@ -65,6 +65,7 @@ Diagrams are showned below.
 * Repository URL: _(https://github.com/enzojimenez/timeoff-management-application)_
 * Branch: _master_
 * Description: _Every Pull Request or merge action that is performed on the default branch will trigger the declared Workflow. In there, the application is tested, containerized (docker) and pushed to Amazon ECR. Finally, a change is made in the repo to update a HELM packeage that later will be picked up by ArgoCD (gitops)._
+* ArgoCD URL: _(https://argo.time.in10minutes.dev/)_
 * Diagram: <img src="images/GorillaLogic/Slide3.PNG" />
 <hr>
 
@@ -75,6 +76,7 @@ Setup to comply with this criteria:
 <li>HTTP: Godaddy domain <i>in10minutes.dev</i> with a CNAME record pointing directly to the Amazon NLB's dns record:<ul><li><a href="http://timeoff-management.in10minutes.dev/login" target="_blank">http://timeoff-management.in10minutes.dev</a></li></ul></li>
 <li>Description: End-to-end encryption over HTTPS, with a Cloudflare Origin CA certificate on the cluster.</li>
 <li>DNS Management [extra]: The external-dns project is running in the cluster for creating DNS records automatically (route53/godaddy)</li>
+<li>SSL Certificates [extra]: There are two Certificate Issuers configured for Cloudflare and Let's Encrypt CA Servers</li>
 <li>Diagram: <img src="images/GorillaLogic/Slide4.PNG" /></li>
 </ul>
 <hr>
